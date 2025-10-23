@@ -1,6 +1,6 @@
-import java.time.format.SignStyle;
+package chess;
 
-import pieces.Piece;
+import chess.pieces.Piece;
 
 public class Board {
     public static final int SIZE = 8;
@@ -22,7 +22,6 @@ public class Board {
         return cells[row][col];
     }
 
-
     public void placePiece(Piece piece, int row , int col){
         Cell cell = getCell(row, col);
         if(cell != null){
@@ -31,12 +30,12 @@ public class Board {
         }
     }
 
-
     public boolean movePiece(Cell from, Cell to){
         Piece piece = from.getPiece();
-        if(piece != null && piece.isVaildMove(to, this)){
+        if(piece != null && piece.isValidMove(to, this)){
             to.setPiece(piece);
             from.setPiece(null);
+            piece.setCurrentCell(to);
             return true;
         }
         return false;
@@ -44,12 +43,12 @@ public class Board {
 
     public void printBoard(){
         for(int i= SIZE - 1 ; i >=0 ;i--){
-            System.out.println((i+1) + " ");
+            System.out.print((i+1) + " ");
             for(int j=0;j<SIZE;j++){
-                System.out.println(cells[i][j] + " ");
+                System.out.print(cells[i][j] + " ");
             }
             System.out.println();
         }
-        System.out.println(" a b c d e f g h");
+        System.out.println("  a b c d e f g h");
     }
 }

@@ -1,12 +1,14 @@
 
 
 
+package chess;
+
+import chess.pieces.Piece;
+
 public class Cell {
     private int row;
     private int col;
-    private  Piece piece;
-
-
+    private Piece piece;
 
     public Cell(int row, int col){
         this.row = row;
@@ -34,6 +36,10 @@ public class Cell {
         this.piece = null;
     }
 
+    public boolean isOccupied(){
+        return piece != null;
+    }
+
     @Override
     public String toString(){
         if(piece == null){
@@ -41,7 +47,4 @@ public class Cell {
         }
         return piece.toString();
     }
-
-
-
 }

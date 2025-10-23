@@ -1,0 +1,3 @@
+@echo off
+echo Starting Chess Game...
+java -cp bin chess.Main

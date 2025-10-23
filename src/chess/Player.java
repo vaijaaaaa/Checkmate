@@ -2,8 +2,7 @@ package chess;
 
 public class Player {
     private boolean isWhite;
-    private Sring name;
-
+    private String name;
 
     public Player(String name, boolean isWhite){
         this.name = name;

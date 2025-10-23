@@ -1,31 +1,31 @@
-package pieces;
-
+package chess.pieces;
 
 import chess.Cell;
 import chess.Board;
 
 public abstract class Piece {
     protected boolean isWhite;
-    protected Cell currentcell;
+    protected Cell currentCell;
 
-    public Piece(boolean isWhite, Cell currentcell){
+    public Piece(boolean isWhite, Cell currentCell){
         this.isWhite = isWhite;
-        this.currentcell = currentcell;
+        this.currentCell = currentCell;
+    }
+
+    public boolean isWhite(){
+        return isWhite;
     }
 
     public Cell getCurrentCell(){
-        return currentcell;
+        return currentCell;
     }
 
     public void setCurrentCell(Cell cell){
-        this.currentcell =cell;
+        this.currentCell = cell;
     }
 
-
-    public abstract boolean isVaildMove(Cell newCell, Board board);
+    public abstract boolean isValidMove(Cell newCell, Board board);
 
     @Override
     public abstract String toString();
-
-
 }
