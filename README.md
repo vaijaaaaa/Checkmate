@@ -1,6 +1,18 @@
-# Chess Game with GUI
+<div align="center">
 
-A complete chess game implementation in Java with a graphical user interface using Swing.
+# Checkmate
+
+*"The beauty of a move lies not in its appearance but in the thought behind it."*
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Swing](https://img.shields.io/badge/Swing-GUI-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+### ♟️ A fully functional GUI chess game built with Java and Swing
+
+</div>
+
+---
 
 ## Features
 
